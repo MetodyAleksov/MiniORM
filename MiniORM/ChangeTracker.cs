@@ -22,10 +22,6 @@ namespace MiniORM
         private List<T> CloneEntities(IEnumerable<T> entities)
         {
             var clonedEntities = new List<T>();
-
-            var propertiesToClone = typeof(T)
-                .GetProperties()
-                .Where(pi => DbContext.AllowedSqlTypes)
         }
     }
 }
